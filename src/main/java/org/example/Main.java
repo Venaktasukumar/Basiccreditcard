@@ -44,7 +44,8 @@ class Basiccreditcard implements Cloneable{
         Basiccreditcard ba=new Basiccreditcard(naMe,creditcardnumber,expirationdate);
         ba.compare(c1);
         Basiccreditcard ba1=(Basiccreditcard) ba.clone();
-        l.info(ba.equaal(ba1));
+        String k=ba.equaal(ba1);
+        l.info(k);
         sc.close();
     }
 }
