@@ -14,7 +14,7 @@ class Basiccreditcard implements Cloneable{
     protected Object clone() throws CloneNotSupportedException{
         return super.clone();
     }
-    public String equaal(Basiccreditcard s){
+    public String equale(Basiccreditcard s){
         if(creditcardNumber == s.creditcardNumber){
             return "true";
         }
@@ -44,7 +44,7 @@ class Basiccreditcard implements Cloneable{
         Basiccreditcard ba=new Basiccreditcard(naMe,creditcardnumber,expirationdate);
         ba.compare(c1);
         Basiccreditcard ba1=(Basiccreditcard) ba.clone();
-        String k=ba.equaal(ba1);
+        String k=ba.equale(ba1);
         l.info(k);
         sc.close();
     }
