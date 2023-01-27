@@ -11,7 +11,7 @@ class Basiccreditcard implements Cloneable{
         this.creditcardNumber=creditcardNumber;
         this.expirationDate=expirationDate;
     }
-    protected Object clone() throws CloneNotSupportedException{
+    public Object clone() throws CloneNotSupportedException{
         return super.clone();
     }
     public String equally(Basiccreditcard s){
