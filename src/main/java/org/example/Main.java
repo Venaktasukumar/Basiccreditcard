@@ -32,22 +32,27 @@ class Basiccreditcard implements Cloneable{
     public static void main(String[] args) throws CloneNotSupportedException{
         Logger l = Logger.getLogger("com.api.jar");
         Scanner sc=new Scanner(System.in);
-        l.info("name1:");
-        String naMe=sc.nextLine();
-        l.info("no1:");
-        int creditcardnumber=sc.nextInt();
-        sc.nextLine();
-        l.info("date1:");
-        String expirationdate=sc.nextLine();
-        l.info("Enter the new person credit card number:");
-        int c1=sc.nextInt();
-        l.info("checking whether two credit card numbers same or not");
-        Basiccreditcard ba=new Basiccreditcard(naMe,creditcardnumber,expirationdate);
-        ba.compare(c1);
-        l.info("After cloning");
-        Basiccreditcard ba1=(Basiccreditcard) ba.clone();
-        String k=ba.equally(ba1);
-        l.info(k);
-        sc.close();
+        try {
+            l.info("name:");
+            String naMe = sc.nextLine();
+            l.info("credit card number:");
+            int creditcardnumber = sc.nextInt();
+            sc.nextLine();
+            l.info("Expiry Date:");
+            String expirationdate = sc.nextLine();
+            l.info("Enter the new person credit card number:");
+            int c1 = sc.nextInt();
+            l.info("checking whether two credit card numbers same or not");
+            Basiccreditcard ba = new Basiccreditcard(naMe, creditcardnumber, expirationdate);
+            ba.compare(c1);
+            l.info("After cloning");
+            Basiccreditcard ba1 = (Basiccreditcard) ba.clone();
+            String k = ba.equally(ba1);
+            l.info(k);
+            sc.close();
+        }
+        catch(InputMismatchException e){
+            l.info("invalid input "+e);
+        }
     }
 }
