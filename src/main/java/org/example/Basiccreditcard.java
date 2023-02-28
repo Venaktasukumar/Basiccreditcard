@@ -2,7 +2,7 @@ package org.example;
 import java.util.*;
 import java.util.logging.*;
 
-class Basiccreditcard implements Cloneable{
+public class Basiccreditcard implements Cloneable{
     String name;
     long creditcardNumber;
     String expirationDate;
